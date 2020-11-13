@@ -153,6 +153,28 @@ section h2{
 	margin-top: 1em;
 }
 
+.container {
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-inline * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+
 /* Nav bar */
 
 nav {
@@ -357,6 +379,7 @@ header, section {
     padding-bottom: 1.125em;
     margin-bottom: 2.25em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom-width: 100%;
 }
 
 .nobottom {
