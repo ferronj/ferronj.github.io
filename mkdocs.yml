@@ -1,6 +1,17 @@
 site_name: ferronj.github.io
+#site_url: ferronj.github.io
 theme:
-  name: simple-blog
+  #name: simple-blog
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+plugins:
+ - blog
 
 nav:
-    - Home: index.md
+  - Home: index.md
+  - Blog: blog/index.md
+  - References: references.md
+
+
