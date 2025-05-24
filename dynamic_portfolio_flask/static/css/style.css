@@ -1,0 +1,44 @@
+/* static/css/style.css */
+:root {
+    --background-color: #ffffff; /* Default to white background (day / fallback) */
+    --text-color: #333333;       /* Default to dark grey text (day / fallback) */
+    --header-footer-bg: #f0f0f0;
+    --header-footer-text: #333333;
+    /* Add more variables as needed, e.g., for links, accents */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+header, footer {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+}
+
+/* Example of night theme overrides (will be applied by JS via data attribute) */
+[data-theme="night"] {
+    --background-color: #333333;
+    --text-color: #f0f0f0;
+    --header-footer-bg: #222222;
+    --header-footer-text: #f0f0f0;
+}
+
+/* Basic blocky graphics for fallback (can be expanded) */
+.logo-graphic { /* Example, you'd add <div class="logo-graphic"></div> in base.html if needed */
+    width: 50px;
+    height: 50px;
+    background-color: var(--text-color); /* Will be black in fallback/day, light in night */
+    margin-bottom: 10px;
+}
