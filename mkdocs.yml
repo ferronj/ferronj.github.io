@@ -15,6 +15,8 @@ nav:
   - Blog: blog/index.md
   - References: references.md
   - Showcase: showcase.md
+  - Projects:
+      - Conway's Game of Life: projects/conways_game_of_life.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

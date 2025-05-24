@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Dynamic Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        // Apply theme mode from Flask
+        // This script should be in the <head> to prevent Flash of Unstyled Content (FOUC)
+        // if it directly manipulates classes/attributes affecting styles.
+        const themeMode = "{{ theme_mode|default('day') }}"; // theme_mode is passed from Flask
+        document.documentElement.setAttribute('data-theme', themeMode);
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Example of a blocky graphic for fallback -->
+        <!-- <div class="logo-graphic"></div> -->
+        <h1>My Dynamic Portfolio</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+    <!-- main.js is currently empty, can be used for more complex JS later -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
