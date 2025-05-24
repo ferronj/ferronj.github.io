@@ -8,10 +8,14 @@ theme:
     - navigation.sections
 plugins:
  - blog
+ - jupyter
 
 nav:
   - Home: index.md
   - Blog: blog/index.md
   - References: references.md
+  - Showcase: showcase.md
 
-
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
