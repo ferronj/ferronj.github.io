@@ -1,5 +1,1 @@
----
-
 **Note on Project Status:** This repository is currently transitioning from an MkDocs-based static site to a dynamic Flask application. The Flask application code can be found in the `dynamic_portfolio_flask/` directory. The previous MkDocs deployment workflow has been removed.
-
----
